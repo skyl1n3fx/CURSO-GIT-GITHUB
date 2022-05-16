@@ -1,0 +1,41 @@
+// Cambiar de directorio
+cd <nombre_directorio(s)>
+
+// Volver un directorio atrás
+cd .. 
+
+// Ver la ruta en donde me encuentro desde la terminal 
+pwd
+
+// Listar el contenido de un directorio
+ls 
+
+// Mover
+mv <nombre_archivo> <ruta_destino>
+(ejem) mv apuntes.txt cursos/programacion/
+
+// Copiar
+cp <nombre_archivo> <ruta_destino>
+(ejem) cp apuntes.txt cursos/programacion/
+
+// Crear archivo
+touch <nombre_archivo>
+
+// Editar archivo y/o crear
+nano <nombre_archivo> 
+(ctrl + s = guardar)
+(ctrl + x = salir)
+
+// Crear directorios
+mkdir <nombre_directorio>
+
+
+// Ver contenido de un archivo
+cat <nombre_archivo>
+
+// Eliminar
+rm <nombre_archivo>
+
+// Eliminar de forma recursiva (forzada)
+rm -rf <nombre_archivo>
+
