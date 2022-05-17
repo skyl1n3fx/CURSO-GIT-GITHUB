@@ -1,0 +1,19 @@
+git branch --all
+
+
+git pull origin main
+
+es lo mismo que git fetch + git merge origin/main (rama remota)
+
+
+// Sirve cuando tienes modificaciones en una rama remota y en una rama local
+// y quieres hacer un pull para evitar commits se innecesarios de fusión 
+git pull --rebase origin main
+
+
+hacer rebases en local con cosas que no hayan sido pusheadas
+puede alterar la línea temporal de commits, reescribirla
+
+
+
+git log --graph --all --since=2022-05-16
