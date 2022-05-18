@@ -1,0 +1,4 @@
+# GIT IGNORA TODOS LOS ARCHIVOS QUE APARECEN AQUÍ
+*.txt
+node_modules/
+readme.md

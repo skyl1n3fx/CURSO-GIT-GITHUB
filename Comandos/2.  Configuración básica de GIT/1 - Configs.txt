@@ -1,0 +1,59 @@
+============================================
+Versión, actualización y ayuda.
+============================================
+// Nos muestra nuestra versión instalada de GIT
+git --version
+
+// Nos actualiza la herramienta de GIT si estaba instalada a la última versión estable
+git update-git-for-windows  (actualiza git en mi pc a la última vesión)
+
+// Nos muestra una ayuda de comandos
+git --help
+
+============================================
+Configuración de GIT.
+============================================
+// Nos muestra todas las posibles configuraciones
+git config -h 
+
+// Ingresamos nuestro nombre
+git config --global user.name “Jorge Quintui” 
+
+// Ingresamos un correo electrónico
+git config --global user.email “jorge@gmail.com”
+
+// Setea la rama inicial con el nombre de main
+git config --global init.defaultBranch main
+
+// Establece git con el formato de fecha de nuestro equipo
+git --global config log.date local
+
+// Establece el salto de línea (Caracter especial CR)
+
+//para windows
+git config --global core.autocrlf true
+
+// Para Linux o Mac
+git config --global core.autocrlf input
+
+// Nos permite configurar el editor por defecto
+git config --global core.editor "code --wait"
+
+
+============================================
+ALIAS
+============================================
+// Alias para log
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+// Alias para status
+git config --global alias.s status “—short”
+
+============================================
+Ver configs
+============================================
+// No lista nuestra cofiguración
+git config --global -e 
+
+// Otra forma de ver nuestra configuración
+git config --list

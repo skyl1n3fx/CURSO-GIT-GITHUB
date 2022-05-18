@@ -1,0 +1,59 @@
+======================================
+Manejo de ramas
+======================================
+(Lo mejor es trabajar en ramas, en la rama main se debe dejar la versión para producción)
+
+
+// Ver las ramas del repositorio
+git branch
+
+// Crear ramas
+git branch <nombre>
+
+// Cambiar el nombre de la rama
+git branch -m master main
+
+// Cambiar de rama
+git checkout <nombre_rama>
+
+// Crear rama e ingresar a ella 
+git checkout -b <nombre_rama>
+
+// Ver ramas traídas del repositorio remoto por fetch 
+git branch -r
+
+// Muestra todas las ramas, locales y remotas
+git branch --all
+
+---------------------------------------------
+Eliminar ramas
+---------------------------------------------
+
+// Borrar rama (me avisará que debo hacer un merge antes de eliminar)
+git branch -d <branch-name>
+
+// Borrar rama de forma forzada
+git branch -D <branch-name>
+
+// Borrar la rama (Se agrega la f si quiero forzar la eliminacion)
+git branch -d <branch-name> -f 
+
+======================================
+Fusión de ramas
+======================================
+-----------------------------------------
+MERGE
+-----------------------------------------
+// Desde la rama main
+git merge <nombre_rama>
+
+-----------------------------------------
+REBASE
+-----------------------------------------
+// REBASE
+// ADVERTENCIA REBASE puede reescribir la historia de tus commits, puede borrar commits
+// desde mi rama hacer un rebase a main
+// permite fusionar las referencias en una linea
+git rebase main
+
+

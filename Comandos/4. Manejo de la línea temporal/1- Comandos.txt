@@ -1,0 +1,133 @@
+==============================
+Repositorio local
+==============================
+
+// Inicializa un repositorio local en la ruta donde te encuentras
+git init
+
+// Nos muestra el estado actual de los archivos del workspace
+git status 
+
+// Preparar a los archivos en el stage para darle seguimiento
+
+// Agrega todo al stage
+git add . 
+
+// Otra forma de agregar todo al stage
+git add -A
+
+// Agrega al stage arhivos con una extensión en específico
+git add uploads/*.gitkeep
+
+// Agrega al stage todo lo que se encuentra dentro de un directorio
+git add css/
+
+// Agregar sólo modificaciones o eliminaciones al stage
+git add -u 
+
+
+====================================
+Eliminar del STAGE
+====================================
+git rm --cached archivo.txt
+git reset archivo.txt
+git restore --staged archivo.txt
+
+
+====================================
+Ver cambios en los archivos
+====================================
+
+// Ver cambios de archivo que ya cuenta con seguimiento  
+git diff archivo.txt
+
+// Ver cambios de archivo que que se encuentra en el stage
+git diff --staged archivo.txt
+
+
+
+===================================
+COMMITS
+===================================
+
+// Confirmación del stage con un comentario
+git commit -m "Comentario"
+
+// Permite agregar mas archivos al último commit e incluso cambiar el nombre del mensaje
+git commit --amend -m "Mensaje arreglado"
+
+
+// Hace 2 en una agrega al stage y realiza un commit (Sólo para archivos que cuentan con seguimiento)
+git commit -am “nuevo commit”
+
+// Creación de un commit vacío para subir nuestra rama local al remoto
+git commit --allow-empty -m "initial commit branch jorge"
+
+
+===================================
+Deshacer COMMITS
+===================================
+
+// Nos permite reconstruir el proyecto al último commit 
+(deshace todos los cambios realizados después del último commit)
+git checkout -- .
+
+-----------------------------------
+SOFT
+(SOFT MANTIENE LOS CAMBIOS ACTUALES Y LOS DEJA EN EL STAGE)
+-----------------------------------
+
+git reset --soft HEAD^^ (Number optional) (especifica cuantos commits atrás quieres volver)
+git reset --soft ded04d7
+
+-----------------------------------
+MIXED
+(MIXED MANTIENE LOS CAMBIOS ACTUALES Y LOS DEJA FUERA DEL STAGE)
+-----------------------------------
+
+git reset --mixed HEAD^^ (Number optional) (especifica cuantos commits atrás quieres volver)
+git reset --mixed ded04d7
+
+-----------------------------------
+HARD
+(HARD DEJA EL REPOSITORIO TAL Y COMO ESTABA EN ESA LINEA DE TIEMPO)
+-----------------------------------
+
+git reset --hard HEAD^^ (Number optional) (especifica cuantos commits atrás quieres volver)
+git reset --hard ded04d7
+
+// vuelve al penúltimo commit eliminando lo del último commit 
+// ~ (ALT + 126)
+git reset --hard HEAD~1
+
+// Me mantiene los archivos creados
+git reset --soft HEAD~1
+
+// Elimina el commit del remoto
+git revert ded04d7 
+
+// Deshacer el último commit realizado en el remoto
+git revert HEAD 
+
+
+===================================================
+LOGS
+===================================================
+
+// Nos permite ver los commits realizados
+git log
+
+// Ver más resumida la línea temporal 
+git log --oneline
+
+// Ver la línea temporal con gráficos
+git log --oneline --decorate --graph
+
+// Nos permite filtrar los logs por fechas
+git log --oneline --since=2022-05-15
+
+// Nos permite ver todo lo sucedido en orden cronológico
+git reflog
+
+
+
